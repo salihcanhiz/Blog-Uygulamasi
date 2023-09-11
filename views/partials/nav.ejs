@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
     <div class="container">
-        <a href="/" class="navbar-brand">Blogapp</a>
+        <a href="/" class="navbar-brand">Blog Uygulaması</a>
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
                 <a href="/blogs" class="nav-link">Blog Listesi</a>
@@ -9,16 +9,16 @@
             <% if (isAuth == 1) { %>             
                 
                 <li class="nav-item">
-                    <a href="/admin/blogs" class="nav-link">Admin Blogs </a>
+                    <a href="/admin/blogs" class="nav-link">Admin Blogları </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/categories" class="nav-link">Admin Categories </a>
+                    <a href="/admin/categories" class="nav-link">Admin Kategorileri </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/blog/create" class="nav-link">Add Blog </a>
+                    <a href="/admin/blog/create" class="nav-link">Blog Ekle </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/category/create" class="nav-link">Add Category </a>
+                    <a href="/admin/category/create" class="nav-link">Kategori Ekle </a>
                 </li>
 
             <% } %>
@@ -32,14 +32,14 @@
                     <a href="/account/index" class="nav-link"><%= fullname %> </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/account/logout" class="nav-link">Logout</a>
+                    <a href="/account/logout" class="nav-link">Çıkış Yap</a>
                 </li>
             <% } else { %>
                 <li class="nav-item">
-                    <a href="/account/login" class="nav-link">Login</a>
+                    <a href="/account/login" class="nav-link">Giriş Yap</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/account/register" class="nav-link">Register</a>
+                    <a href="/account/register" class="nav-link">Üye Ol</a>
                 </li>
             <% } %>               
             

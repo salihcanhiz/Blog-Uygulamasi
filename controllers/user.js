@@ -42,9 +42,9 @@ exports.blog_list = async function(req, res) {
         });
 
         const categories = await Category.findAll({ raw: true });
-
+        
         res.render("users/blogs", {
-            title: "Tüm Kurslar",
+            title: "Kurslar",
             blogs: rows,
             totalItems: count,
             totalPages: Math.ceil(count / size),
