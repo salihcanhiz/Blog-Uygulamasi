@@ -5,6 +5,7 @@ const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const Role = require("../models/role");
 
+// Geçici Veri
 async function populate() {
     const count = await Category.count();
 
