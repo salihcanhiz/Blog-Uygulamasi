@@ -285,7 +285,7 @@ exports.get_blogs = async function(req, res) {
             } 
         });
         res.render("admin/blog-list", {
-            title: "Blog Listesi",
+            title: "blog list",
             blogs: blogs,
             action: req.query.action,
             blogid: req.query.blogid
@@ -301,7 +301,7 @@ exports.get_categories = async function(req, res) {
         const categories = await Category.findAll();
 
         res.render("admin/category-list", {
-            title: "Kategori Listesi",
+            title: "blog list",
             categories: categories,
             action: req.query.action,
             categoryid: req.query.categoryid

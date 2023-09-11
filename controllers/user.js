@@ -59,6 +59,7 @@ exports.blog_list = async function(req, res) {
 }
 
 exports.index = async function(req, res) {
+    console.log(req.cookies);
     try {
         const blogs = await Blog.findAll({
             where: {
@@ -70,12 +71,13 @@ exports.index = async function(req, res) {
             raw: true
         });
         const categories = await Category.findAll({ raw: true });
-            
+
         res.render("users/index", {
             title: "Popüler Kurslar",
             blogs: blogs,
             categories: categories,
-            selectedCategory: null
+            selectedCategory: null,
+            isAuth: req.cookies.isAuth
         })
     }
     catch(err) {
