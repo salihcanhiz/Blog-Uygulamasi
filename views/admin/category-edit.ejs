@@ -12,6 +12,7 @@
             <div class="col-md-12 mt-3">
                 <div class="card card-body">
                     <form method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                         <input type="hidden" name="categoryid" value="<%= category.id %>">
                         <div class="row mb-3">
                             <label for="baslik" class="col-sm-2 col-form-label">Name</label>
@@ -29,7 +30,7 @@
                 <p>
                     blog sayısı: <%= countBlog %> 
                 </p>
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped mt-3">
                     <thead>
                         <tr>
                             <th style="width: 50px;">id</th>
@@ -52,6 +53,7 @@
                                     <a class="btn btn-sm btn-primary" href="/admin/blogs/<%= blog.dataValues.id %>">edit</a>
 
                                     <form style="display: inline-block;" action="/admin/categories/remove" method="post">
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                         <input type="hidden" name="blogid" value="<%= blog.id %>">
                                         <input type="hidden" name="categoryid" value="<%= category.id %>">
                                         <button class="btn btn-sm btn-danger" type="submit">Kategoriden Çıkar</button>
